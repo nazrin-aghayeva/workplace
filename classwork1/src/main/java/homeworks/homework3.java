@@ -23,60 +23,77 @@ public class homework3 {
         for (int i=0; i<7; i++){
                 System.out.println("Please, input the day of a week: ");
                 Scanner in = new Scanner(System.in);
-                String day = in.nextLine();
-                switch (day) {
-                    case "Sunday":
-                    case "SUNDAY":
-                    case "Sunday ":
-                    case "SUNDAY ":
+                String input = in.nextLine().trim().toLowerCase();
+                switch (input) {
+                    case "sunday":
                         System.out.println(scedule[0][1]);
                         break;
-                    case "Monday":
-                    case "MONDAY":
-                    case "Monday ":
-                    case "MONDAY ":
+                    case "monday":
                         System.out.println(scedule[1][1]);
                         break;
-                    case "Tuesday":
-                    case "TUESDAY":
-                    case "Tuesday ":
-                    case "TUESDAY ":
+                    case "tuesday":
                         System.out.println(scedule[2][1]);
                         break;
-                    case "Wednesday":
-                    case "WEDNESDAY":
-                    case "Wednesday ":
-                    case "WEDNESDAY ":
+                    case "wednesday":
                         System.out.println(scedule[3][1]);
                         break;
-                    case "Thursday":
-                    case "THURSDAY":
-                    case "Thursday ":
-                    case "THURSDAY ":
+                    case "thursday":
                         System.out.println(scedule[4][1]);
                         break;
-                    case "Friday":
-                    case "FRIDAY":
-                    case "Friday ":
-                    case "FRIDAY ":
+                    case "friday":
                         System.out.println(scedule[5][1]);
                         break;
-                    case "Saturday":
-                    case "SATURDAY":
-                    case "SATURDAY ":
-                    case "Saturday ":
+                    case "saturday":
                         System.out.println(scedule[6][1]);
                         break;
-                    case "change Monday":
-                        System.out.println(" Please input new tasks for Monday: ");
+
+                    case "change Sunday":
+                        System.out.println(" Please input new tasks for Sunday: ");
                         Scanner inn= new Scanner(System.in);
                         String task = inn.nextLine();
-                        scedule[1][1]= task;
+                        scedule[0][1]= task;
+                        break;
+                    case "change monday":
+                        System.out.println(" Please input new tasks for Monday: ");
+                        Scanner inn1= new Scanner(System.in);
+                        String task1 = inn1.nextLine();
+                        scedule[1][1]= task1;
+                        break;
+                    case "change tuesday":
+                        System.out.println(" Please input new tasks for Tuesday: ");
+                        Scanner inn2= new Scanner(System.in);
+                        String task2 = inn2.nextLine();
+                        scedule[2][1]= task2;
+                        break;
+                    case "change wednesday":
+                        System.out.println(" Please input new tasks for Wednesday: ");
+                        Scanner inn3= new Scanner(System.in);
+                        String task3 = inn3.nextLine();
+                        scedule[3][1]= task3;
+                        break;
+                    case "change thursday":
+                        System.out.println(" Please input new tasks for Thursday: ");
+                        Scanner inn4= new Scanner(System.in);
+                        String task4 = inn4.nextLine();
+                        scedule[4][1]= task4;
+                        break;
+                    case "change friday":
+                        System.out.println(" Please input new tasks for Friday: ");
+                        Scanner inn5= new Scanner(System.in);
+                        String task5 = inn5.nextLine();
+                        scedule[5][1]= task5;
+                        break;
+                    case "change saturday":
+                        System.out.println(" Please input new tasks for Saturday: ");
+                        Scanner inn6= new Scanner(System.in);
+                        String task6 = inn6.nextLine();
+                        scedule[6][1]= task6;
                         break;
                     case "exit":
-                        break;
+                       return;
                     default:
                         System.out.println("Sorry, I don't understand you, please try again.");
+
                 }
         }
     }
