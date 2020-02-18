@@ -44,12 +44,12 @@ public class Human {
         this.iq= iq;
     }
     public String toString(){
-        return "Human"+"{"+"name=" + "'" + name +"' ," + "surname="+ "'" + surname +"' ," + "year=" +year+" "+ ",iq=" + iq +" " + "schedule= " + Arrays.deepToString(schedule);
+        return "Human"+"{"+"name=" + "'" + name +"' ," + "surname="+ "'" + surname +"' ," + "year=" +year+" "+ ",iq=" + iq;
     }
-    private void greetPet(){
+    public void greetPet(){
         System.out.println("Hello, " + family.getPet().getNickname());
     }
-    private void describePet() {
+    public void describePet() {
         if (family.getPet().getTrickLevel() > 50) {
             String sly = "very sly";
             System.out.println("I have" + family.getPet().getSpecies() + ",he is " + family.getPet().getAge() + "years old" + " " + ",he is " + " " + sly);
@@ -67,18 +67,7 @@ public class Human {
             System.out.println("I think "+ family.getPet().getNickname()+" is not hungry");
             return false;
         }
+
     }
 
 }
-//
-//
-//    public String toString(){
-////        String display;
-//         return  "Human"+"{"+"name=" + "'" + name +"' ," + "surname="+ "'" + surname +"' ," + "year=" +year+" "+ ",iq=" + iq +" " + ",mother=" + this.mother.name+ " " + this.mother.surname + " " +",father= "+ this.father.name + " "+ this.father.surname+ " "+ "pet="+
-//         pet.species+"{" + "nickname=" + pet.nickname+ ", " + "age=" + pet.age + ", " +"trickLevel=" + pet.trickLevel +", " + "habitats=" + Arrays.toString(pet.habitats) + "}";
-////        System.out.println(display.toString());
-//    }
-    //advanced part
-//
-//}
-//Human{name='Michael', surname='Karleone', year=1977, iq=90, mother=Jane Karleone, father=Vito Karleone, pet=dog{nickname='Rock', age=5, trickLevel=75, habits=[eat, drink, sleep]}}`
