@@ -1,6 +1,7 @@
-package homework5;
+package homework6;
 
-import java.util.Arrays;
+import homework5.Family;
+
 import java.util.Random;
 
 public class Human {
@@ -9,7 +10,7 @@ public class Human {
     private int year;
     private int iq;
     private Family family;
-    String[][] schedule = new String[7][2];
+//    String[][] schedule = new String[7][2];
     Random random=new Random();
     //constructor
     public Human(String name, String surname, int year, int iq) {
@@ -18,11 +19,6 @@ public class Human {
         this.year = year;
         this.iq=iq;
     }
-
-    public Human() {
-
-    }
-
     //for private
     public String getName(){
         return this.name;
@@ -63,6 +59,12 @@ public class Human {
             System.out.println("I have" + family.getPet().getSpecies() + ",he is " + family.getPet().getAge() + "years old" + " " + ",he is " + " " + sly);
         }
     }
+    @Override
+    protected void finalize() throws Throwable
+    {
+        System.out.println("From Finalize Method");
+    }
+
         public boolean feedPet(boolean isTimeToFeed){
         if (isTimeToFeed||random.nextInt()<family.getPet().getTrickLevel()){
             System.out.println("Hmm, i will feed "+family.getPet().getNickname()+" ");
