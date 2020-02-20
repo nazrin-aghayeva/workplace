@@ -4,23 +4,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GeometricApp {
+
+    private static Figure figure;
+
     public static void main(String[] args) {
         Point p1;
         Point p2;
         Point p3;
 
-        Figure circle= new Circle(new Point(5,6),7);
-        Figure triangle= new Triangle(new Point(5,6),new Point(4,3),new Point(2,3)) ;
-        Figure rectangle= new Rectangle(new Point(1,2),new Point(4,8)) ;
+        int r= (int)(Math.random()*10+1);
+        Figure circle= new Circle(new Point(r,r),r);
+        Figure triangle= new Triangle(new Point(r,r),new Point(r,r),new Point(r,r)) ;
+        Figure rectangle= new Rectangle(new Point(r,r),new Point(r,r)) ;
 
-        List<Figure> figureList= new ArrayList<>();
-        figureList.add(circle);
-        figureList.add(triangle);
-        figureList.add(rectangle);
-        System.out.println(figureList);
+        ArrayList<Figure> figures = new ArrayList<>();
+        figures.add(circle);
+        figures.add(triangle);
+        figures.add(rectangle);
 
-        circle.area();
-        triangle.area();
-        rectangle.area();
+//        for (Figure figure: figures) {
+//            int c= (int)(Math.random()*10+1);
+//            figures.add(c, figure);
+//        }
+
+        int total_area = 0;
+        for (Figure f: figures) {
+            total_area += f.area();
+        }
+
+        System.out.println(total_area);
+
     }
 }

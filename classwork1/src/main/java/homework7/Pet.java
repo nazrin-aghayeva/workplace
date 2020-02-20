@@ -6,6 +6,9 @@ import java.util.Arrays;
 import java.util.Objects;
 
 abstract class Pet {
+
+
+
     public enum Species{
         DOG,
         DOMESTICCAT,
@@ -21,18 +24,17 @@ abstract class Pet {
 
         switch (species) {
             case DOG:
-               Dog dog= new Dog();
                 break;
 
             case ROBOCAT:
-                RoboCat roboCat= new RoboCat();
+
                 break;
 
             case FISH:
-                Fish fish= new Fish();
+
                 break;
             case DOMESTICCAT:
-                DomesticCat domesticCat= new DomesticCat();
+
                 break;
 
             default:
@@ -54,16 +56,11 @@ abstract class Pet {
         System.out.println("I am eating");
     }
 
-    public    void respond(){
-        System.out.println("Hello owner. I am " +nickname + ".I miss you!");
-    }
+    public abstract void respond();
 
-    public void foul(){
-        System.out.println("I need cover it up");
-    }
 
-    public Pet(Species species, String nickname, int age, int trickLevel, String[] habitats){
-        this.species=species;
+
+    public Pet( String nickname, int age, int trickLevel, String[] habitats){
         this.nickname=nickname;
         this.age=age;
         this.trickLevel=trickLevel;

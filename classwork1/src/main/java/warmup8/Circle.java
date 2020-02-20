@@ -6,8 +6,10 @@ public class Circle extends Figure {
 
     @Override
     public int area(){
-        return (radius*radius);
-    }
+
+            return (int) (Math.PI * Math.pow(radius, 2));
+        }
+
 
     public Circle(Point p1,  int radius){
        this.p1= p1;

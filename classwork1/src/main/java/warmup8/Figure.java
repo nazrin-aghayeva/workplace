@@ -1,7 +1,8 @@
 package warmup8;
 
 public class Figure {
-    public int area(){
-        return (2*3);
-    }
+        public int area(){
+            throw new IllegalArgumentException("There is no sense to calculate area of...");
+        }
+
 }
