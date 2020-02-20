@@ -6,7 +6,7 @@ public class Circle extends Figure {
 
     @Override
     public int area(){
-        return (2*3*radius);
+        return (radius*radius);
     }
 
     public Circle(Point p1,  int radius){
