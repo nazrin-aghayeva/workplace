@@ -9,11 +9,17 @@ public class Pet {
     private int age;
     private int trickLevel= (int)(Math.random()*(100+1));
     private String[] habitats;
-
     public Pet() {
 
     }
 
+    public Pet(String species, String nickname, int age, int trickLevel, String[] habitats){
+        this.species=species;
+        this.nickname=nickname;
+        this.age=age;
+        this.trickLevel=trickLevel;
+        this.habitats=habitats;
+    }
     public void eat(){
         System.out.println("I am eating");
     }
@@ -24,14 +30,6 @@ public class Pet {
 
     public void foul(){
         System.out.println("I need cover it up");
-    }
-
-    public Pet(String species, String nickname, int age, int trickLevel, String[] habitats){
-        this.species=species;
-        this.nickname=nickname;
-        this.age=age;
-        this.trickLevel=trickLevel;
-        this.habitats=habitats;
     }
 
     public String getSpecies() {
@@ -89,6 +87,7 @@ public class Pet {
         return result;
     }
 
+    @Override
     public String toString(){
 //        String display;
         return species+"{" + "nickname=" + nickname+ ", " + "age=" + age + ", " +"trickLevel=" + trickLevel +", " + "habitats=" + Arrays.toString(habitats) + "}";

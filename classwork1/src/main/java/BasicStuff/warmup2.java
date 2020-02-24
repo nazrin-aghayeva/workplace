@@ -1,3 +1,5 @@
+package BasicStuff;
+
 import java.util.Scanner;
 
 public class warmup2 {

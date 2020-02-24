@@ -1,3 +1,5 @@
+package OOPwarmup;
+
 public class Pizza {
     String name;
     int size;

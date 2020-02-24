@@ -19,6 +19,32 @@ public class Human {
         this.iq=iq;
     }
 
+    public void greetPet(){
+        System.out.println("Hello, " + family.getPet().getNickname());
+    }
+
+    public void describePet() {
+        if (family.getPet().getTrickLevel() > 50) {
+            String sly = "very sly";
+            System.out.println("I have" + family.getPet().getSpecies() + ",he is " + family.getPet().getAge() + "years old" + " " + ",he is " + " " + sly);
+        } else {
+            String sly = "not almost sly";
+            System.out.println("I have" + family.getPet().getSpecies() + ",he is " + family.getPet().getAge() + "years old" + " " + ",he is " + " " + sly);
+        }
+    }
+
+    public boolean feedPet(boolean isTimeToFeed){
+        if (isTimeToFeed||random.nextInt()<family.getPet().getTrickLevel()){
+            System.out.println("Hmm, i will feed "+family.getPet().getNickname()+" ");
+            return true;
+        }
+        else {
+            System.out.println("I think "+ family.getPet().getNickname()+" is not hungry");
+            return false;
+        }
+
+    }
+
     public Human() {
 
     }
@@ -48,31 +74,10 @@ public class Human {
     public void setIq(int iq){
         this.iq= iq;
     }
+
+
+    @Override
     public String toString(){
         return "Human"+"{"+"name=" + "'" + name +"' ," + "surname="+ "'" + surname +"' ," + "year=" +year+" "+ ",iq=" + iq;
     }
-    public void greetPet(){
-        System.out.println("Hello, " + family.getPet().getNickname());
-    }
-    public void describePet() {
-        if (family.getPet().getTrickLevel() > 50) {
-            String sly = "very sly";
-            System.out.println("I have" + family.getPet().getSpecies() + ",he is " + family.getPet().getAge() + "years old" + " " + ",he is " + " " + sly);
-        } else {
-            String sly = "not almost sly";
-            System.out.println("I have" + family.getPet().getSpecies() + ",he is " + family.getPet().getAge() + "years old" + " " + ",he is " + " " + sly);
-        }
-    }
-        public boolean feedPet(boolean isTimeToFeed){
-        if (isTimeToFeed||random.nextInt()<family.getPet().getTrickLevel()){
-            System.out.println("Hmm, i will feed "+family.getPet().getNickname()+" ");
-            return true;
-        }
-        else {
-            System.out.println("I think "+ family.getPet().getNickname()+" is not hungry");
-            return false;
-        }
-
-    }
-
 }

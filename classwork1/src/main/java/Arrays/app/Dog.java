@@ -1,3 +1,5 @@
+package Arrays.app;
+
 public class Dog extends Animal {
     Dog(String name) {
         super(name);

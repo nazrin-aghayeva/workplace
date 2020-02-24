@@ -1,3 +1,5 @@
+package Arrays.app;
+
 public class Animal {
     String name;
 

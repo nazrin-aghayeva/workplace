@@ -15,6 +15,49 @@ public class Family {
     public Family() {
 
     }
+    public Family(Human mother, Human father) {
+        this.mother = mother;
+        this.father = father;
+    }
+
+    public Family(Human mother, Human father, Human[] children) {
+        this.mother = mother;
+        this.father = father;
+        this.children = children;
+    }
+
+    public void deleteChild(int count1) {
+
+        if (this.children != null) {
+            for (int i = 0; i < this.children.length; i++) {
+                if (this.children[i] == this.children[count1]) {
+                    for (int j = i; j <count; j++) {
+                        this.children[j] = this.children[j + 1];
+                    }
+                }
+            }
+        }
+
+    }
+
+    public void addChild(Human Child) {
+
+        if (children != null) {
+            count++;
+            child[count] = Child;
+            children = child;
+        } else {
+            child[0] = Child;
+            children = child;
+        }
+    }
+
+    public int countFamily(){
+        count++;// because of first (children[0])
+        return 2+count;
+
+    }
+
 
     public Human getMother() {
         return this.mother;
@@ -48,55 +91,16 @@ public class Family {
         this.pet = pet;
     }
 
-    public Family(Human mother, Human father) {
-        this.mother = mother;
-        this.father = father;
-    }
-
-    public Family(Human mother, Human father, Human[] children) {
-        this.mother = mother;
-        this.father = father;
-        this.children = children;
-    }
-
-    public void addChild(Human Child) {
-
-        if (children != null) {
-            count++;
-            child[count] = Child;
-            children = child;
-        } else {
-            child[0] = Child;
-            children = child;
-        }
-    }
-    public void deleteChild(int count1) {
-
-        if (this.children != null) {
-            for (int i = 0; i < this.children.length; i++) {
-                if (this.children[i] == this.children[count1]) {
-                    for (int j = i; j <count; j++) {
-                        this.children[j] = this.children[j + 1];
-                    }
-                }
-            }
-        }
-
-    }
-
-    public int countFamily(){
-        count++;// because of first (children[0])
-        return 2+count;
-
-    }
 
     @Override
     public boolean equals(Object o) {
         if (o == null) return false;
-        if (!(o instanceof Pet)) return false;
+        if (!(o instanceof Family)) return false;
 
-        Pet that = (Pet)o;
-        if (this.pet.getHabitats() != that.getHabitats()) return false;
+        Family that = (Family) o;
+        if (this.father != that.getFather()) return false;
+        if (this.mother != that.getMother()) return false;
+        if (this.children != that.getChildren()) return false;
         return true;
     }
 
