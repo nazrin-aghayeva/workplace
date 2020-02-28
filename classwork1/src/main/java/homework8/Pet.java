@@ -1,9 +1,6 @@
-package homework6;
+package homework8;
 
-import java.util.Arrays;
 import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
 
 public class Pet {
     public enum Species{
@@ -16,7 +13,7 @@ public class Pet {
     private String nickname;
     private int age;
     private int trickLevel= (int)(Math.random()*(100+1));
-    private String[] habitats;
+    HashSet<String> habitats= new HashSet<>();
 
     public Pet() {
 
@@ -34,7 +31,7 @@ public class Pet {
         System.out.println("I need cover it up");
     }
 
-    public Pet(Species species, String nickname, int age, int trickLevel, String[] habitats){
+    public Pet(Species species, String nickname, int age, int trickLevel, HashSet<String> habitats){
         this.species=species;
         this.nickname=nickname;
         this.age=age;
@@ -71,10 +68,10 @@ public class Pet {
         this.nickname = nickname;
     }
 
-    public String[] getHabitats() {
+    public HashSet<String> getHabitats() {
         return habitats;
     }
-    public void setHabitats( String[] habitats) {
+    public void setHabitats( HashSet<String> habitats) {
         this.habitats = habitats;
     }
 
