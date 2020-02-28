@@ -32,8 +32,8 @@ public class FamilyApp {
         family.addChild(Kate);
         family.setPet(Jim);
         System.out.println(family.toString());
-        System.out.println("This family have " + family.countFamily() + " members");
         family.deleteChild(2);
+        System.out.println("This family have " + family.countFamily() + " members");
         System.out.println("Data of family after deleting");
         System.out.println(family.toString());
 

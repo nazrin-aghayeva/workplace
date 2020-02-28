@@ -14,6 +14,10 @@ String hello;
     }
     Formatter2(String hello){
         this.hello=hello;
-        System.out.println( hello.toLowerCase());
+    }
+    @Override
+    public String toString() {
+        return  hello.toUpperCase();
+
     }
 }

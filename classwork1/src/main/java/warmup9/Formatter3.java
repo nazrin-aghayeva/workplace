@@ -14,6 +14,5 @@ public class Formatter3 extends Formatter0 {
     }
     Formatter3(String hello){
         this.hello=hello;
-        System.out.println( "***********\n"+"* "+hello+"*\n"+"***********");
     }
 }

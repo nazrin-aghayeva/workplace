@@ -26,20 +26,6 @@ public class Family {
         this.children = children;
     }
 
-    public void deleteChild(int count1) {
-
-        if (this.children != null) {
-            for (int i = 0; i < this.children.length; i++) {
-                if (this.children[i] == this.children[count1]) {
-                    for (int j = i; j <count; j++) {
-                        this.children[j] = this.children[j + 1];
-                    }
-                }
-            }
-        }
-
-    }
-
     public void addChild(Human Child) {
 
         if (children != null) {
@@ -49,13 +35,29 @@ public class Family {
         } else {
             child[0] = Child;
             children = child;
+            count++;
+
         }
     }
 
-    public int countFamily(){
-        count++;// because of first (children[0])
-        return 2+count;
+    public void deleteChild(int count1) {
 
+        if (this.children != null) {
+            for (int i = 0; i < this.children.length; i++) {
+                if (this.children[i] == this.children[count1]) {
+                    for (int j = i; j <count; j++) {
+                        this.children[j] = this.children[j + 1];
+                    }
+                    count--;
+                }
+            }
+        }
+
+    }
+
+
+    public int countFamily(){
+        return 2+count;
     }
 
 

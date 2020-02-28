@@ -73,7 +73,6 @@ public class Family {
         }
     }
     public void deleteChild(int count1) {
-
         if (this.children != null) {
             for (int i = 0; i < this.children.length; i++) {
                 if (this.children[i] == this.children[count1]) {
@@ -81,27 +80,15 @@ public class Family {
                         this.children[j] = this.children[j + 1];
                     }
                 }
+                count=count-1;
             }
         }
 
     }
 
     public int countFamily(){
-        count++;// because of first (children[0])
         return 2+count;
-
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (o == null) return false;
-        if (!(o instanceof Pet)) return false;
-
-        Pet that = (Pet)o;
-        if (this.pet.getHabitats() != that.getHabitats()) return false;
-        return true;
-    }
-
     @Override
     public String toString() {
         return "mother= " + mother + "\n"+
