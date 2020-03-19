@@ -10,8 +10,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class FamilyTest {
 
     Family family = new Family();
-    Human Kane = new homework5.Human("Kane", "Baker", 2002, 76);
-    Human Bryce = new homework5.Human("Bryce", "Baker", 2000, 78);
+    Human Kane = new Human("Kane", "Baker", 2002, 76);
+    Human Bryce = new Human("Bryce", "Baker", 2000, 78);
     Human Kate = new Human("Kate", "Baker", 2000, 78);
 
 
