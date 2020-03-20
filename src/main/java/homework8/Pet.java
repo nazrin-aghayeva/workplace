@@ -1,19 +1,50 @@
 package homework8;
 
-import java.util.HashSet;
+import java.util.Arrays;
+import java.util.Objects;
 
-public class Pet {
+abstract class Pet {
+
+
+
     public enum Species{
         DOG,
-        CAT,
-        BIRD,
-        HAMSTER
+        DOMESTICCAT,
+        ROBOCAT,
+        FISH,
+        UNKNOWN
+    }
+    public void EnumTest(Species species) {
+        this.species = species;
+    }
+
+    public void tellItLikeItIs() {
+
+        switch (species) {
+            case DOG:
+                break;
+
+            case ROBOCAT:
+
+                break;
+
+            case FISH:
+
+                break;
+            case DOMESTICCAT:
+
+                break;
+
+            default:
+            case UNKNOWN:
+                break;
+        }
     }
     private Species species;
     private String nickname;
     private int age;
     private int trickLevel= (int)(Math.random()*(100+1));
-    HashSet<String> habitats= new HashSet<>();
+    private String[] habitats;
 
     public Pet() {
 
@@ -23,16 +54,11 @@ public class Pet {
         System.out.println("I am eating");
     }
 
-    public    void respond(){
-        System.out.println("Hello owner. I am " +nickname + ".I miss you!");
-    }
+    public abstract void respond();
 
-    public void foul(){
-        System.out.println("I need cover it up");
-    }
 
-    public Pet(Species species, String nickname, int age, int trickLevel, HashSet<String> habitats){
-        this.species=species;
+
+    public Pet(String nickname, int age, int trickLevel, String[] habitats){
         this.nickname=nickname;
         this.age=age;
         this.trickLevel=trickLevel;
@@ -68,17 +94,35 @@ public class Pet {
         this.nickname = nickname;
     }
 
-    public HashSet<String> getHabitats() {
+    public String[] getHabitats() {
         return habitats;
     }
-    public void setHabitats( HashSet<String> habitats) {
+    public void setHabitats(String[] habitats) {
         this.habitats = habitats;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Pet)) return false;
+        Pet pet = (Pet) o;
+        return getAge() == pet.getAge() &&
+                getTrickLevel() == pet.getTrickLevel() &&
+                Objects.equals(getSpecies(), pet.getSpecies()) &&
+                Objects.equals(getNickname(), pet.getNickname()) &&
+                Arrays.equals(getHabitats(), pet.getHabitats());
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(getSpecies(), getNickname(), getAge(), getTrickLevel());
+        result = 31 * result + Arrays.hashCode(getHabitats());
+        return result;
+    }
 
     public String toString(){
-//      String display;
-        return species+"{" + "nickname=" + nickname+ ", " + "age=" + age + ", " +"trickLevel=" + trickLevel +", " + "habitats=" + habitats + "}";
+//        String display;
+        return species+"{" + "nickname=" + nickname+ ", " + "age=" + age + ", " +"trickLevel=" + trickLevel +", " + "habitats=" + Arrays.toString(habitats) + "}";
 //        System.out.println(display.toString());
 //        return display;
     }

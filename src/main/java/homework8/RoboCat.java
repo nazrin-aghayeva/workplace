@@ -1,6 +1,10 @@
 package homework8;
 
-public class RoboCat extends homework7.Pet {
+public class RoboCat extends Pet {
+    public RoboCat(String nickname, int age, int trickLevel, String[] habitats) {
+        super(nickname, age, trickLevel, habitats);
+    }
+
     public void respond() {
 
     }
