@@ -6,6 +6,7 @@ public class DomesticCat extends Pet implements Foul {
     }
 
     public void respond() {
+        System.out.println("Hi i am"+ getNickname());
 
     }
     public void foul(){
