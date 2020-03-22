@@ -4,8 +4,11 @@ import java.util.Arrays;
 import java.util.Objects;
 
 abstract class Pet {
-
-
+    private Species species;
+    private String nickname;
+    private int age;
+    private int trickLevel= (int)(Math.random()*(100+1));
+    private String[] habitats;
 
     public enum Species{
         DOG,
@@ -19,36 +22,21 @@ abstract class Pet {
     }
 
     public void tellItLikeItIs() {
-
         switch (species) {
             case DOG:
                 break;
-
             case ROBOCAT:
-
                 break;
-
             case FISH:
-
                 break;
             case DOMESTICCAT:
-
                 break;
-
             default:
             case UNKNOWN:
                 break;
         }
     }
-    private Species species;
-    private String nickname;
-    private int age;
-    private int trickLevel= (int)(Math.random()*(100+1));
-    private String[] habitats;
-
-    public Pet() {
-
-    }
+    public Pet() {}
 
     public void eat(){
         System.out.println("I am eating");

@@ -5,5 +5,4 @@ public class RoboCat extends Pet {
         System.out.println("Hi i am"+ getNickname());
 
     }
-    // there is no need for foul method
 }

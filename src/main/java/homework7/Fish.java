@@ -10,6 +10,4 @@ public class Fish extends Pet {
     public void respond() {
         System.out.println("Hi my name is"+ getNickname());
     }
-    // there is no need for foul method
-
-}
+    }

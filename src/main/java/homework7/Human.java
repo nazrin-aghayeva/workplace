@@ -10,16 +10,15 @@ public class Human {
     private int year;
     private int iq;
     private Family family;
-//    String[][] schedule = new String[7][2];
     Random random=new Random();
-    //constructor
+
     public Human(String name, String surname, int year, int iq) {
         this.name = name;
         this.surname = surname;
         this.year = year;
         this.iq=iq;
     }
-    //for private
+
     public String getName(){
         return this.name;
     }
