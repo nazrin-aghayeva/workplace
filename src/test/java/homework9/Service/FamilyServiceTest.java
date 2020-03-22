@@ -48,6 +48,9 @@ class FamilyServiceTest {
 
     @Test
     void count() {
+        FamilyController familyController= new FamilyController();
+        int expected= familyController.count();
+        assertEquals(expected, familyController.count());
     }
 
     @Test
