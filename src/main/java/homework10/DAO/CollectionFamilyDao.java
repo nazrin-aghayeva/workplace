@@ -1,8 +1,7 @@
-package homework9.DAO;
+package homework10.DAO;
 
-import homework9.Entity.Family;
-import homework9.Entity.Human;
-import homework9.Service.FamilyService;
+import homework10.Entity.Family;
+import homework10.Entity.Human;
 
 import java.util.ArrayList;
 import java.util.List;

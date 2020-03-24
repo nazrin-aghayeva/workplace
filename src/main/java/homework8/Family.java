@@ -2,12 +2,13 @@ package homework8;
 
 
 import java.util.ArrayList;
+import java.util.Set;
 
 public class Family {
     private Human mother;
     private Human father;
     private ArrayList<Human> children;
-    private Pet pet;
+    private Set<Pet> pet;
     int count=0;
     ArrayList<Human> child = new ArrayList<>(5);
 
@@ -39,11 +40,11 @@ public class Family {
         this.children = children;
     }
 
-    public Pet getPet() {
+    public Set<Pet> getPet() {
         return this.pet;
     }
 
-    public void setPet(Pet pet) {
+    public void setPet(Set<Pet> pet) {
         this.pet = pet;
     }
 

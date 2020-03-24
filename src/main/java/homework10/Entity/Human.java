@@ -1,15 +1,23 @@
-package homework8;
+package homework10.Entity;
 
 import homework5.Family;
 
-import java.time.Instant;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Random;
 
 public class Human {
     private String name;
     private String surname;
-    private long birthDate = Instant.now().getEpochSecond();
+    private long birthDate ;
+    private LocalDate birthTime;
+
     private int iq;
+
+    public Family getFamily() {
+        return family;
+    }
+
     private Family family;
     Random random=new Random();
 
@@ -19,6 +27,7 @@ public class Human {
         this.birthDate = birthDate;
         this.iq=iq;
     }
+
     public String getName(){
         return this.name;
     }
@@ -43,12 +52,12 @@ public class Human {
     public void setIq(int iq){
         this.iq= iq;
     }
-    public String toString(){
-        return "Human"+"{"+"name=" + "'" + name +"' ," + "surname="+ "'" + surname +"' ," + "birth date=" +birthDate+" "+ ",iq=" + iq;
-    }
+
+
     public void greetPet(){
         System.out.println("Hello, " + family.getPet().getNickname());
     }
+
     public void describePet() {
         if (family.getPet().getTrickLevel() > 50) {
             String sly = "very sly";
@@ -57,11 +66,6 @@ public class Human {
             String sly = "not almost sly";
             System.out.println("I have" + family.getPet().getSpecies() + ",he is " + family.getPet().getAge() + "years old" + " " + ",he is " + " " + sly);
         }
-    }
-    @Override
-    protected void finalize() throws Throwable
-    {
-        System.out.println("From Finalize Method");
     }
 
         public boolean feedPet(boolean isTimeToFeed){
@@ -76,4 +80,18 @@ public class Human {
 
     }
 
+//    public LocalDate describeAge(){
+//        return  LocalDate.now() - birthTime;
+//    }
+
+    public String toString(){
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        return "Human"+"{"+"name=" + "'" + name +"' ," + "surname="+ "'" + surname +"' ," + "birth date=" +dateFormat.format(this.birthDate)+" "+ ",iq=" + iq;
+    }
+
+    @Override
+    protected void finalize() throws Throwable
+    {
+        System.out.println("From Finalize Method");
+    }
 }

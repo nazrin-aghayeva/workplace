@@ -2,12 +2,17 @@ package homework9.Entity;
 
 import homework5.Family;
 
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.LocalDate;
 import java.util.Random;
 
 public class Human {
     private String name;
     private String surname;
-    private int year;
+    private long birthDate ;
+
+
     private int iq;
 
     public Family getFamily() {
@@ -17,14 +22,13 @@ public class Human {
     private Family family;
     Random random=new Random();
 
-    //constructor
-    public Human(String name, String surname, int year, int iq) {
+    public Human(String name, String surname, long birthDate, int iq) {
         this.name = name;
         this.surname = surname;
-        this.year = year;
+        this.birthDate = birthDate;
         this.iq=iq;
     }
-    //for private
+
     public String getName(){
         return this.name;
     }
@@ -37,11 +41,11 @@ public class Human {
     public void setSurname(String surname){
         this.surname=surname;
     }
-    public int getYear(){
-        return this.year;
+    public long getYear(){
+        return this.birthDate;
     }
     public void setYear(int year){
-        this.year= year;
+        this.birthDate= year;
     }
     public int getIq(){
         return this.iq;
@@ -49,12 +53,12 @@ public class Human {
     public void setIq(int iq){
         this.iq= iq;
     }
-    public String toString(){
-        return "Human"+"{"+"name=" + "'" + name +"' ," + "surname="+ "'" + surname +"' ," + "year=" +year+" "+ ",iq=" + iq;
-    }
+
+
     public void greetPet(){
         System.out.println("Hello, " + family.getPet().getNickname());
     }
+
     public void describePet() {
         if (family.getPet().getTrickLevel() > 50) {
             String sly = "very sly";
@@ -63,11 +67,6 @@ public class Human {
             String sly = "not almost sly";
             System.out.println("I have" + family.getPet().getSpecies() + ",he is " + family.getPet().getAge() + "years old" + " " + ",he is " + " " + sly);
         }
-    }
-    @Override
-    protected void finalize() throws Throwable
-    {
-        System.out.println("From Finalize Method");
     }
 
         public boolean feedPet(boolean isTimeToFeed){
@@ -82,4 +81,19 @@ public class Human {
 
     }
 
+//    public String describeAge(){
+//        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+//        String final1 = dateFormat.format(this.birthDate);
+//    }
+
+    public String toString(){
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        return "Human"+"{"+"name=" + "'" + name +"' ," + "surname="+ "'" + surname +"' ," + "birth date=" +dateFormat.format(this.birthDate)+" "+ ",iq=" + iq;
+    }
+
+    @Override
+    protected void finalize() throws Throwable
+    {
+        System.out.println("From Finalize Method");
+    }
 }

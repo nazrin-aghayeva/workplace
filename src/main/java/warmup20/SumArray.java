@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class SumArray {
     static int fibo (int data) {
-        if (data<=1){
+        if (data==1 || data==2){
             return data;
         }
       return fibo(data-1)+fibo(data-2);

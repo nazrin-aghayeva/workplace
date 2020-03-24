@@ -1,6 +1,8 @@
-package homework7;
+package homework10.Entity;
 
-final public class Man extends Human {
+import homework7.Human;
+
+public class Man extends Human {
     public Man(String name, String surname, int year, int iq) {
         super(name, surname, year, iq);
     }

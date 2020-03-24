@@ -1,8 +1,8 @@
-package homework8;
+package homework10.Entity;
 
 import homework7.Human;
 
-final public class  Woman extends Human {
+public class Woman extends Human {
 
     public Woman(String name, String surname, int year, int iq) {
         super(name, surname, year, iq);
