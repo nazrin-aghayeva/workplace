@@ -4,6 +4,7 @@ import homework5.Family;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.Random;
 
 public class Human {
@@ -21,11 +22,15 @@ public class Human {
     private Family family;
     Random random=new Random();
 
+
+
     public Human(String name, String surname, long birthDate, int iq) {
         this.name = name;
         this.surname = surname;
-        this.birthDate = birthDate;
         this.iq=iq;
+        Date date=new Date(birthDate);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        System.out.println(dateFormat.format(date));
     }
 
     public String getName(){
@@ -80,9 +85,11 @@ public class Human {
 
     }
 
-//    public LocalDate describeAge(){
-//        return  LocalDate.now() - birthTime;
-//    }
+    public Date describeAge(){
+        long millis=System.currentTimeMillis();
+        long diff= millis-birthDate;
+        return new java.sql.Date(diff);
+    }
 
     public String toString(){
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
