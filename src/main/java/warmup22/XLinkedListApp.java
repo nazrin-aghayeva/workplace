@@ -9,7 +9,12 @@ public class XLinkedListApp {
     xl.append(10); // 3, 2, 1, 10
     xl.append(20); // 3, 2, 1, 10, 20
     xl.size();
+    xl.reverse(2);
+    xl.reverse(3);
+    xl.reverse(4);
+    xl.reverse(6);
     System.out.println(xl.represent());
-//    System.out.println(xl.represent2());
+    System.out.println(xl.represent());
+    System.out.println(xl.represent2());
   }
 }

@@ -1,5 +1,7 @@
 package warmup22;
 
+import com.sun.tools.internal.xjc.model.CElement;
+
 import java.util.StringJoiner;
 
 public class XLinkedList {
@@ -57,10 +59,19 @@ public class XLinkedList {
 
   }
 
-  Node reverse() {
-    throw new IllegalArgumentException("represent:hasn't implemented yet");
-
-
+  Node reverse(int element) {
+    Node node= new Node(element);
+      Node prev = null;
+      Node current = node;
+      Node next;
+      while (current != null) {
+        next = current.next;
+        current.next = prev;
+        prev = current;
+        current = next;
+      }
+      node = prev;
+      return node;
   }
 
   void insertBefore(int index, int value) {
@@ -99,6 +110,8 @@ public class XLinkedList {
     }
     return sj.toString();
   }
+
+
 
 
 }
