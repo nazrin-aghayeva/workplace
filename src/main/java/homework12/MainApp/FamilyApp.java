@@ -51,34 +51,40 @@ public class FamilyApp {
                         System.out.println(familyController.countFamiliesWithMemberNumber(number_equal));
                         break;
                     case "6":
-                        System.out.println("Enter mother's name:");
-                        String mom_name = scanner.next();
-                        System.out.println("Enter mothers's surname:");
-                        String mom_surname = scanner.next();
-                        System.out.println("Enter year of birth: ");
-                        int mom_year = scanner.nextInt();
-                        System.out.println("Enter month of birth");
-                        int mom_month = scanner.nextInt();
-                        System.out.println("Enter birthday");
-                        int mom_day= scanner.nextInt();
-                        System.out.println("Enter level of intelligence");
-                        int mom_iq = scanner.nextInt();
+                        try {
+                            System.out.println("Enter mother's name:");
+                            String mom_name = scanner.next();
+                            System.out.println("Enter mothers's surname:");
+                            String mom_surname = scanner.next();
+                            System.out.println("Enter year of birth: ");
+                            int mom_year = scanner.nextInt();
+                            System.out.println("Enter month of birth");
+                            int mom_month = scanner.nextInt();
+                            System.out.println("Enter birthday");
+                            int mom_day= scanner.nextInt();
+                            System.out.println("Enter level of intelligence");
+                            int mom_iq = scanner.nextInt();
 
-                        System.out.println("Enter father's name:");
-                        String dad_name = scanner.next();
-                        System.out.println("Enter father's surname:");
-                        String dad_surname = scanner.next();
-                        System.out.println("Enter year of birth: ");
-                        int dad_year = scanner.nextInt();
-                        System.out.println("Enter month of birth");
-                        int dad_month = scanner.nextInt();
-                        System.out.println("Enter birthday");
-                        int dad_day= scanner.nextInt();
-                        System.out.println("Enter level of intelligence");
-                        int dad_iq = scanner.nextInt();
-                        familyController.createNewFamily(new Human(mom_name,mom_surname,mom_year,mom_month,mom_day,mom_iq),new Human(dad_name,dad_surname,dad_year,dad_month,dad_day,dad_iq));
-                        System.out.println("Data saved");
-                        break;
+                            System.out.println("Enter father's name:");
+                            String dad_name = scanner.next();
+                            System.out.println("Enter father's surname:");
+                            String dad_surname = scanner.next();
+                            System.out.println("Enter year of birth: ");
+                            int dad_year = scanner.nextInt();
+                            System.out.println("Enter month of birth");
+                            int dad_month = scanner.nextInt();
+                            System.out.println("Enter birthday");
+                            int dad_day= scanner.nextInt();
+                            System.out.println("Enter level of intelligence");
+                            int dad_iq = scanner.nextInt();
+                            familyController.createNewFamily(new Human(mom_name,mom_surname,mom_year,mom_month,mom_day,mom_iq),new Human(dad_name,dad_surname,dad_year,dad_month,dad_day,dad_iq));
+                            System.out.println("Data saved");
+
+                        }
+                       catch (InputMismatchException ex){
+                           System.out.println("Please enter valid data");
+                       }
+                    break;
 
                     case "7":
                         System.out.println("Enter id to delete family");
@@ -95,15 +101,20 @@ public class FamilyApp {
                         String menu_item1= scanner.next();
                         switch (menu_item1) {
                             case "1":
-                                System.out.println("Enter ID of family to which you want add:");
-                                int familyId = scanner.nextInt();
-                                Family familyById= familyController.getByFamilyId(familyId);
-                                System.out.println("Enter name for boy");
-                                String boy = scanner.next();
-                                System.out.println("Enter name for girl");
-                                String girl = scanner.next();
-                                familyController.bornChild(familyById, boy,girl);
-                                System.out.println("Data saved");
+                                try {
+                                    System.out.println("Enter ID of family to which you want add:");
+                                    int familyId = scanner.nextInt();
+                                    Family familyById = familyController.getByFamilyId(familyId);
+                                    System.out.println("Enter name for boy");
+                                    String boy = scanner.next();
+                                    System.out.println("Enter name for girl");
+                                    String girl = scanner.next();
+                                    familyController.bornChild(familyById, boy, girl);
+                                    System.out.println("Data saved");
+                                }
+                                catch (InputMismatchException ex){
+                                    System.out.println("Please enter valid data");
+                                }
                                 break;
                             case "2":
                                 try {
@@ -149,12 +160,5 @@ public class FamilyApp {
                         break;
                 }
             }
-
-
-//    private static Family getFamilyById (int id){
-//        Optional<Family> family = collectionFamilyDao.get(id);
-//        return family.orElseGet(
-//                Family::new
-//        );
     }
 }

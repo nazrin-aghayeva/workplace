@@ -27,15 +27,15 @@ Human human;
     }
 
     public List<Family> getFamiliesBiggerThan(int specified){
-        return getFamilies().stream().filter(f-> family.getChildren().size()+2>specified).collect(Collectors.toList());
+        return getFamilies().stream().filter(f-> f.getChildren().size()+2>specified).collect(Collectors.toList());
     }
 
     public List<Family> getFamiliesLessThan(int specified){
-       return getFamilies().stream().filter(f-> family.getChildren().size()+2<specified).collect(Collectors.toList()) ;
+       return getFamilies().stream().filter(f-> (f.getChildren().size()+2<specified)).collect(Collectors.toList()) ;
     }
 
     public long countFamiliesWithMemberNumber(long given) {
-        return getFamilies().stream().filter(f-> family.getChildren().size()+2==given).count();
+        return getFamilies().stream().filter(f-> f.getChildren().size()+2==given).count();
     }
 
     public void createNewFamily(Human mother, Human father){
