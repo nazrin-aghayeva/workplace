@@ -69,10 +69,19 @@ public class FamilyService extends CollectionFamilyDao {
             throw new ArrayIndexOutOfBoundsException();
         }
     }
-    public Family adoptChild(int id, Human human){
-        database.getAllFamilies().get(id).getChildren().add(human);
-        database.writeToFileFamilies();
-        return family;
+    public Family adoptChild(Family family , Human human){
+        try {
+            int id = database.getAllFamilies().indexOf(family);
+            if (id < 0) {
+                id++;
+            }
+            database.getAllFamilies().get(id).getChildren().add(human);
+            database.writeToFileFamilies();
+            return family;
+        }
+        catch (ArrayIndexOutOfBoundsException ex){
+            throw new ArrayIndexOutOfBoundsException();
+        }
     }
 
     public void deleteAllChildrenOlderThen(int required){
