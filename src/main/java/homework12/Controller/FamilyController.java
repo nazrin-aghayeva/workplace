@@ -3,6 +3,7 @@ package homework12.Controller;
 import homework12.Entity.Family;
 import homework12.Entity.Human;
 import homework12.Entity.Pet;
+import homework13.FamilyOverflowException;
 import homework12.Service.FamilyService;
 
 import java.util.List;
@@ -55,12 +56,18 @@ public class FamilyController extends FamilyService {
 
     @Override
     public Family bornChild(Family family, String male, String female) {
-        return super.bornChild(family, male,female);
+        if (count()<7) {
+            return super.bornChild(family, male, female);
+        }
+        else throw new FamilyOverflowException("too much");
     }
 
     @Override
-    public Family adoptChild(int id, Human human) {
-        return super.adoptChild(id, human);
+    public Family adoptChild(Family family, Human human) {
+        if (family.countFamily(family)<6) {
+            return super.adoptChild(family, human);
+        }
+        else throw new FamilyOverflowException("too much");
     }
 
     @Override

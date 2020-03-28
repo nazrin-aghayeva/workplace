@@ -120,6 +120,7 @@ public class FamilyApp {
                                 try {
                                     System.out.println("Enter ID of family to which you want add:");
                                     int familyId1 = scanner.nextInt();
+                                    Family familyById1= familyController.getByFamilyId(familyId1);
                                     System.out.println("Enter name:");
                                     String name = scanner.next();
                                     System.out.println("Enter surname: ");
@@ -128,7 +129,7 @@ public class FamilyApp {
                                     int birthYear = scanner.nextInt();
                                     System.out.println("Enter level of intelligence");
                                     int iq = scanner.nextInt();
-                                    familyController.adoptChild(familyId1, new Human(name, surname, birthYear, iq));
+                                    familyController.adoptChild(familyById1, new Human(name, surname, birthYear, iq));
                                     System.out.println("Data saved");
                                 }
                                 catch (InputMismatchException ex){

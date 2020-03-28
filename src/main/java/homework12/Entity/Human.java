@@ -5,6 +5,8 @@ import homework5.Family;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.Year;
+import java.time.temporal.ChronoField;
 import java.util.Date;
 import java.util.Random;
 
@@ -12,8 +14,6 @@ public class Human extends Family {
     private String name;
     private String surname;
     private long birthDate ;
-    private LocalDate birthTime;
-
     private int iq;
 
     public Family getFamily() {
@@ -25,11 +25,11 @@ public class Human extends Family {
 
 
 
-    public Human(String name, String surname,  int iq,long birthDate) {
+    public Human(String name, String surname,  long birthDate,int iq) {
         this.name = name;
         this.surname = surname;
         this.iq=iq;
-        this.birthDate=System.currentTimeMillis();
+        this.birthDate=birthDate;
     }
 
     public Human(String name, String surname, int year, int month, int day, int iq)  {
@@ -63,9 +63,11 @@ public class Human extends Family {
         this.surname=surname;
     }
     public long getYear(){
-        return this.birthDate;
-    }
-    public void setYear(int year){
+        Year year= Year.of(LocalDate.now().getYear());
+        long value
+                = year.getLong(ChronoField.YEAR_OF_ERA);
+        return value-this.birthDate;
+    }    public void setYear(int year){
         this.birthDate= year;
     }
     public int getIq(){
@@ -111,6 +113,16 @@ public class Human extends Family {
     public String prettyFormat(){
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         return "{"+"name=" + "'" + name +"' ," + "surname="+ "'" + surname +"' ," + "birth date=" +dateFormat.format(this.birthDate)+" "+ ",iq=" + iq;
+    }
+
+    @Override
+    public String toString() {
+        return "Human{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", birthDate=" + birthDate +
+                ", iq=" + iq +
+                '}';
     }
 
     @Override

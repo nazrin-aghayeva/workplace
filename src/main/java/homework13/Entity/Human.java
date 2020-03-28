@@ -12,8 +12,6 @@ public class Human extends Family {
     private String name;
     private String surname;
     private long birthDate ;
-    long millis=System.currentTimeMillis();
-    long ageOfAdoptedChild=millis-birthDate;
     private int iq;
 
     public Family getFamily() {

@@ -56,17 +56,22 @@ Human human;
         getFamilies().get(id).getChildren().add(child);
         return family;
     }
-    public Family adoptChild(int id, Human human){
-        getFamilies().get(id).getChildren().add(human);
+    public Family adoptChild(Family family, Human human){
+        int i= getFamilies().indexOf(family);
+        getFamilies().get(i).getChildren().add(human);
         return family;
     }
 
     public void deleteAllChildrenOlderThen(int required){
-
-        for (int i=0; i< collectionFamilyDao.getYearOfChildren().size();i++){
-            if(collectionFamilyDao.getYearOfChildren().get(i)<required) {
-                family.deleteChild(i);
+        try {
+            for (int j = 0; j < getAll().size(); j++) {
+                if (getAll().get(j).getChildren().get(j).getYear() > required) {
+                    getAll().get(j).getChildren().remove(j);
+                }
             }
+        }
+        catch (IndexOutOfBoundsException ex){
+            ex.printStackTrace();
         }
     }
 
