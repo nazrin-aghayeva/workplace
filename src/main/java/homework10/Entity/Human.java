@@ -29,7 +29,7 @@ public class Human {
         this.surname = surname;
         this.iq=iq;
         Date date=new Date(birthDate);
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy");
         System.out.println(dateFormat.format(date));
     }
 
@@ -92,7 +92,7 @@ public class Human {
     }
 
     public String toString(){
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy");
         return "Human"+"{"+"name=" + "'" + name +"' ," + "surname="+ "'" + surname +"' ," + "birth date=" +dateFormat.format(this.birthDate)+" "+ ",iq=" + iq;
     }
 
