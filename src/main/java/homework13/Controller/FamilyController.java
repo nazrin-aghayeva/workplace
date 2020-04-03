@@ -3,7 +3,7 @@ package homework13.Controller;
 import homework13.Entity.Family;
 import homework13.Entity.Human;
 import homework13.Entity.Pet;
-import homework13.FamilyOverflowException;
+import homework13.exceptions.FamilyOverflowException;
 import homework13.Service.FamilyService;
 
 import java.util.List;
