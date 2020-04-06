@@ -1,7 +1,7 @@
 package ibaHW6;
 
-import homework5.Family;
-import homework5.Human;
+import ibaHW5.Family;
+import ibaHW5.Human;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

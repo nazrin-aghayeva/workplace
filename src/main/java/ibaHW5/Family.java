@@ -1,7 +1,6 @@
-package homework5;
+package ibaHW5;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 public class Family {
     private Human mother;

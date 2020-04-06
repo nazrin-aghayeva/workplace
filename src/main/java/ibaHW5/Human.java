@@ -1,6 +1,5 @@
-package homework5;
+package ibaHW5;
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class Human {

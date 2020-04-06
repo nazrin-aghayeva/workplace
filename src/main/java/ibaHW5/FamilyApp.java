@@ -1,4 +1,4 @@
-package homework5;
+package ibaHW5;
 
 public class FamilyApp {
     public static void main(String[] args) {
