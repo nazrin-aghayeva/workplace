@@ -1,11 +1,11 @@
-package homework11.Service;
+package ibaHomework11.Service;
 
 
-import homework11.DAO.CollectionFamilyDao;
-import homework11.DAO.FamilyDao;
-import homework11.Entity.Family;
-import homework11.Entity.Human;
-import homework11.Entity.Pet;
+import ibaHomework11.DAO.CollectionFamilyDao;
+import ibaHomework11.DAO.FamilyDao;
+import ibaHomework11.Entity.Family;
+import ibaHomework11.Entity.Human;
+import ibaHomework11.Entity.Pet;
 
 import java.util.List;
 import java.util.stream.Collectors;

@@ -1,9 +1,9 @@
-package homework11.Controller;
+package ibaHomework11.Controller;
 
-import homework11.Entity.Family;
-import homework11.Entity.Human;
-import homework11.Entity.Pet;
-import homework11.Service.FamilyService;
+import ibaHomework11.Entity.Family;
+import ibaHomework11.Entity.Human;
+import ibaHomework11.Entity.Pet;
+import ibaHomework11.Service.FamilyService;
 
 import java.util.List;
 
