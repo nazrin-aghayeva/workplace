@@ -1,4 +1,4 @@
-package ibaHomework13.Entity;
+package ibaHW13.Entity;
 
 
 import java.io.Serializable;

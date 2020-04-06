@@ -1,6 +1,6 @@
-package ibaHomework13.Entity;
+package ibaHW13.Entity;
 
-import ibaHomework7.Human;
+import homework7.Human;
 
 public class Man extends Human {
     public Man(String name, String surname, int year, int iq) {

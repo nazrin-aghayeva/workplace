@@ -1,6 +1,6 @@
 package ibaHomework10.Entity;
 
-import ibaHomework7.Human;
+import homework7.Human;
 
 public class Woman extends Human {
 

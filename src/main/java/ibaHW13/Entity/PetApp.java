@@ -1,4 +1,4 @@
-package ibaHomework13.Entity;
+package ibaHW13.Entity;
 
 public class PetApp {
     public static void main(String[] args) {
