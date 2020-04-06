@@ -1,4 +1,4 @@
-package warmup8;
+package warmupOOP8;
 
 public class Triangle extends Figure {
     Point p1;

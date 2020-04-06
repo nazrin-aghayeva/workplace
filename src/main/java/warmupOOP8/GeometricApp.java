@@ -1,7 +1,6 @@
-package warmup8;
+package warmupOOP8;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class GeometricApp {
 
