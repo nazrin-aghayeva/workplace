@@ -1,4 +1,4 @@
-package warmup24;
+package warmupBinarySearch;
 
 public class IsPalindrome {
   boolean check(int n) {

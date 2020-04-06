@@ -1,4 +1,4 @@
-package warmup24;
+package warmupBinarySearch;
 
 import java.util.Arrays;
 import java.util.Random;
