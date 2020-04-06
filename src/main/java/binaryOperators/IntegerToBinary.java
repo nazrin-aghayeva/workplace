@@ -1,3 +1,5 @@
+package binaryOperators;
+
 import java.util.Scanner;
 
 public class IntegerToBinary {

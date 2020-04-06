@@ -1,3 +1,5 @@
+package binaryOperators;
+
 public class InvertString {
   // contains only [a-zA-Z]
   // abc -> ABC
