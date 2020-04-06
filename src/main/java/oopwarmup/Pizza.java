@@ -1,4 +1,4 @@
-package OOPwarmup;
+package oopwarmup;
 
 public class Pizza {
     String name;
