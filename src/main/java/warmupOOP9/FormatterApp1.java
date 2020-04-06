@@ -1,7 +1,5 @@
-package warmup9;//package warmup9;
+package warmupOOP9;//package warmup9;
 
-
-import java.util.Formatter;
 
 import static jdk.nashorn.internal.objects.Global.print;
 
