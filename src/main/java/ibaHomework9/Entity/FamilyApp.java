@@ -1,8 +1,7 @@
-package homework9.Entity;
+package ibaHomework9.Entity;
 
-import homework9.Controller.FamilyController;
-import homework9.DAO.CollectionFamilyDao;
-import homework9.DAO.FamilyDao;
+import ibaHomework9.Controller.FamilyController;
+import ibaHomework9.DAO.CollectionFamilyDao;
 
 import java.util.Optional;
 

@@ -1,14 +1,13 @@
-package homework9.Service;
+package ibaHomework9.Service;
 
 
-import homework9.Entity.Pet;
-import homework9.Entity.Family;
-import homework9.DAO.CollectionFamilyDao;
-import homework9.DAO.FamilyDao;
-import homework9.Entity.Human;
+import ibaHomework9.Entity.Pet;
+import ibaHomework9.Entity.Family;
+import ibaHomework9.DAO.CollectionFamilyDao;
+import ibaHomework9.DAO.FamilyDao;
+import ibaHomework9.Entity.Human;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class FamilyService extends CollectionFamilyDao{
 

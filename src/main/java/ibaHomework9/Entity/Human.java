@@ -1,10 +1,8 @@
-package homework9.Entity;
+package ibaHomework9.Entity;
 
 import homework5.Family;
 
 import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.time.LocalDate;
 import java.util.Random;
 
 public class Human {

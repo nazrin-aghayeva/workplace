@@ -1,6 +1,6 @@
-package homework9.Service;
+package ibaHomework9.Service;
 
-import homework9.Controller.FamilyController;
+import ibaHomework9.Controller.FamilyController;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
