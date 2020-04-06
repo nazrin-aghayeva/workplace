@@ -1,4 +1,4 @@
-package homework8;
+package ibaHomework8;
 
 import homework7.Human;
 

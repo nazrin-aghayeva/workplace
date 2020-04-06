@@ -1,4 +1,4 @@
-package homework8;
+package ibaHomework8;
 
 
 import org.junit.jupiter.api.Test;

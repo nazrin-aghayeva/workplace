@@ -1,4 +1,4 @@
-package homework8;
+package ibaHomework8;
 
 import java.util.HashMap;
 import java.util.Map;
