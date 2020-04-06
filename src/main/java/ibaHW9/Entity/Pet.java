@@ -1,4 +1,4 @@
-package ibaHomework9.Entity;
+package ibaHW9.Entity;
 
 import java.util.Arrays;
 import java.util.Objects;

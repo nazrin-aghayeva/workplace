@@ -1,4 +1,4 @@
-package ibaHomework9.Entity;
+package ibaHW9.Entity;
 
 public class DomesticCat extends Pet implements Foul {
     public DomesticCat(String nickname, int age, int trickLevel, String[] habitats) {
