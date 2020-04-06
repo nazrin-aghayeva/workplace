@@ -1,6 +1,4 @@
-package Uncompleted;
-
-import javax.crypto.MacSpi;
+package Array;
 
 public class warmup3 {
     public static String alphabetSmall(){
