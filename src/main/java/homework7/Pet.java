@@ -1,4 +1,4 @@
-package ibaHomework7;
+package homework7;
 
 import java.util.Arrays;
 import java.util.Objects;

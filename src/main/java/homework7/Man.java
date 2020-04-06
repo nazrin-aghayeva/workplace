@@ -1,4 +1,4 @@
-package ibaHomework7;
+package homework7;
 
 final public class Man extends Human {
     public Man(String name, String surname, int year, int iq) {
