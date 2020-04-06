@@ -1,6 +1,4 @@
-package warmup22;
-
-import com.sun.tools.internal.xjc.model.CElement;
+package warmupLinkedList;
 
 import java.util.StringJoiner;
 

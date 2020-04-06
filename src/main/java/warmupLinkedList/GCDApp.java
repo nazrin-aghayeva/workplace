@@ -1,4 +1,4 @@
-package warmup22;
+package warmupLinkedList;
 
 public class GCDApp {
   int gcd(int a, int b) {

@@ -1,4 +1,4 @@
-package warmup22;
+package warmupLinkedList;
 
 public class XLinkedListApp {
   public static void main(String[] args) {
