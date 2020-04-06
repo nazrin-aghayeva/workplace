@@ -1,9 +1,4 @@
-package homework6;
-
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+package ibaHW6;
 
 public class Pet {
     public enum Species{

@@ -1,8 +1,7 @@
-package homework6;
+package ibaHW6;
 
 import homework5.Family;
 import homework5.Human;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

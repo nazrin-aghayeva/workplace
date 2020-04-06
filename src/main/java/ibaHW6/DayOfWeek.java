@@ -1,4 +1,4 @@
-package homework6;
+package ibaHW6;
 
 public enum DayOfWeek {
     MONDAY,
