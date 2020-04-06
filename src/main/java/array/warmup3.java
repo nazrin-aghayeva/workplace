@@ -1,4 +1,4 @@
-package Array;
+package array;
 
 public class warmup3 {
     public static String alphabetSmall(){
