@@ -1,6 +1,4 @@
-package warmup20;
-
-import java.util.Random;
+package warmupRecursion;
 
 public class SumArray {
     static int fibo (int data) {
