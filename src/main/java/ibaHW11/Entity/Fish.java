@@ -1,4 +1,4 @@
-package ibaHomework11.Entity;
+package ibaHW11.Entity;
 
 public class Fish extends Pet {
 
