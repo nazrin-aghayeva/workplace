@@ -1,6 +1,6 @@
 package homework7;
 
-import homework5.Family;
+import ibaHW5.Family;
 
 import java.util.Random;
 
