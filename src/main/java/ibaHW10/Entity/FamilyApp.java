@@ -1,7 +1,7 @@
-package ibaHomework10.Entity;
+package ibaHW10.Entity;
 
-import ibaHomework10.Controller.FamilyController;
-import ibaHomework10.DAO.CollectionFamilyDao;
+import ibaHW10.Controller.FamilyController;
+import ibaHW10.DAO.CollectionFamilyDao;
 
 import java.util.Optional;
 

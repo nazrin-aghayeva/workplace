@@ -1,4 +1,4 @@
-package ibaHomework10.Entity;
+package ibaHW10.Entity;
 
 import homework7.Human;
 

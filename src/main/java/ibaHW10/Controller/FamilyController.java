@@ -1,9 +1,9 @@
-package ibaHomework10.Controller;
+package ibaHW10.Controller;
 
-import ibaHomework10.Entity.Family;
-import ibaHomework10.Entity.Human;
-import ibaHomework10.Entity.Pet;
-import ibaHomework10.Service.FamilyService;
+import ibaHW10.Entity.Family;
+import ibaHW10.Entity.Human;
+import ibaHW10.Entity.Pet;
+import ibaHW10.Service.FamilyService;
 
 import java.util.List;
 

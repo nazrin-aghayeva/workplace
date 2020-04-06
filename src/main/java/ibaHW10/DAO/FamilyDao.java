@@ -1,4 +1,4 @@
-package ibaHomework10.DAO;
+package ibaHW10.DAO;
 
 import java.util.List;
 import java.util.Optional;

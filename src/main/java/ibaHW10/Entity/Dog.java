@@ -1,4 +1,4 @@
-package ibaHomework10.Entity;
+package ibaHW10.Entity;
 
 public class Dog extends Pet implements Foul {
 
