@@ -1,8 +1,8 @@
-package ibaHomework12.MainApp;
+package ibaHW12.MainApp;
 
-import ibaHomework12.Controller.FamilyController;
-import ibaHomework12.Entity.Family;
-import ibaHomework12.Entity.Human;
+import ibaHW12.Controller.FamilyController;
+import ibaHW12.Entity.Family;
+import ibaHW12.Entity.Human;
 
 import java.text.ParseException;
 import java.util.InputMismatchException;

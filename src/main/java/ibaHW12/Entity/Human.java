@@ -1,4 +1,4 @@
-package ibaHomework12.Entity;
+package ibaHW12.Entity;
 
 import homework5.Family;
 

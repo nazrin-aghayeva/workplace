@@ -1,11 +1,11 @@
-package ibaHomework12.Service;
+package ibaHW12.Service;
 
 
-import ibaHomework12.DAO.CollectionFamilyDao;
-import ibaHomework12.DAO.FamilyDao;
-import ibaHomework12.Entity.Family;
-import ibaHomework12.Entity.Human;
-import ibaHomework12.Entity.Pet;
+import ibaHW12.DAO.CollectionFamilyDao;
+import ibaHW12.DAO.FamilyDao;
+import ibaHW12.Entity.Family;
+import ibaHW12.Entity.Human;
+import ibaHW12.Entity.Pet;
 
 import java.time.LocalDate;
 import java.util.List;
