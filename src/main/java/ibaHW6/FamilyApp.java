@@ -1,8 +1,8 @@
 package ibaHW6;
 
-import homework5.Family;
-import homework5.Human;
-import homework5.Pet;
+import ibaHW5.Family;
+import ibaHW5.Human;
+import ibaHW5.Pet;
 
 import java.util.Arrays;
 
