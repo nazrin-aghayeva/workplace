@@ -1,4 +1,4 @@
-package homework12.Entity;
+package ibaHomework12.Entity;
 
 public interface Foul {
     public void foul();

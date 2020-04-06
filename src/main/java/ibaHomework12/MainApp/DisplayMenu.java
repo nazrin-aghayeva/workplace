@@ -1,4 +1,4 @@
-package homework12.MainApp;
+package ibaHomework12.MainApp;
 
 public class DisplayMenu {
     public void user(){

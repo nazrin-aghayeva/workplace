@@ -1,10 +1,10 @@
-package homework12.Controller;
+package ibaHomework12.Controller;
 
-import homework12.Entity.Family;
-import homework12.Entity.Human;
-import homework12.Entity.Pet;
+import ibaHomework12.Entity.Family;
+import ibaHomework12.Entity.Human;
+import ibaHomework12.Entity.Pet;
 import ibaHomework13.exceptions.FamilyOverflowException;
-import homework12.Service.FamilyService;
+import ibaHomework12.Service.FamilyService;
 
 import java.util.List;
 

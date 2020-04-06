@@ -1,13 +1,11 @@
-package homework12.MainApp;
+package ibaHomework12.MainApp;
 
-import homework12.Controller.FamilyController;
-import homework12.DAO.CollectionFamilyDao;
-import homework12.Entity.Family;
-import homework12.Entity.Human;
+import ibaHomework12.Controller.FamilyController;
+import ibaHomework12.Entity.Family;
+import ibaHomework12.Entity.Human;
 
 import java.text.ParseException;
 import java.util.InputMismatchException;
-import java.util.Optional;
 import java.util.Scanner;
 
 public class FamilyApp {

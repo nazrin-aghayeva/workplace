@@ -1,4 +1,4 @@
-package homework12.Entity;
+package ibaHomework12.Entity;
 
 import java.util.HashMap;
 
