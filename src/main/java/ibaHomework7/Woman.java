@@ -1,4 +1,4 @@
-package homework7;
+package ibaHomework7;
 
 final public class Woman extends Human {
 

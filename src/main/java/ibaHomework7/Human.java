@@ -1,4 +1,4 @@
-package homework7;
+package ibaHomework7;
 
 import homework5.Family;
 

@@ -1,6 +1,6 @@
 package ibaHomework8;
 
-import homework7.Human;
+import ibaHomework7.Human;
 
 final public class  Woman extends Human {
 

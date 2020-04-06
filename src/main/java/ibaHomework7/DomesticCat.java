@@ -1,4 +1,4 @@
-package homework7;
+package ibaHomework7;
 
 public class DomesticCat extends Pet implements Foul {
 
