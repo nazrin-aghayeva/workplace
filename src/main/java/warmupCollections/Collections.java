@@ -1,6 +1,4 @@
-package warmup10;
-
-import java.util.stream.Stream;
+package warmupCollections;
 
 public class Collections {
 
