@@ -1,6 +1,6 @@
 package ibaHW8;
 
-import homework5.Family;
+import ibaHW5.Family;
 
 import java.time.Instant;
 import java.util.Random;
