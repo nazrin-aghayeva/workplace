@@ -1,4 +1,4 @@
-package ibaHomework8;
+package ibaHW8;
 
 public class DomesticCat extends Pet implements Foul {
 

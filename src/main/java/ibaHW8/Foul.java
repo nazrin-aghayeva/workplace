@@ -1,4 +1,4 @@
-package ibaHomework8;
+package ibaHW8;
 
 public interface Foul {
     public void foul();

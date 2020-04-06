@@ -1,4 +1,4 @@
-package ibaHomework8;
+package ibaHW8;
 
 import homework5.Family;
 

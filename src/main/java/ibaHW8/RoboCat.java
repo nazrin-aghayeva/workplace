@@ -1,4 +1,4 @@
-package ibaHomework8;
+package ibaHW8;
 
 public class RoboCat extends Pet {
     public void respond() {
