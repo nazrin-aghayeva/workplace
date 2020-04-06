@@ -1,9 +1,6 @@
-package Arrays;
-
-import javafx.geometry.Pos;
+package arrays;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class ShiftArray {
     public static void main(String[] args) {

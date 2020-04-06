@@ -1,5 +1,4 @@
-package homeworks;
-import java.util.Random;
+package homeworks123;
 import java.util.Scanner;
 
 

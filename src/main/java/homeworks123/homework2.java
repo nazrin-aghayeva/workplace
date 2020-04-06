@@ -1,4 +1,4 @@
-package homeworks;
+package homeworks123;
 import java.util.*;
 public class homework2 {
     public static void main(String[] args) {

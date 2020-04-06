@@ -1,4 +1,4 @@
-package Arrays.app;
+package arrays.app;
 
 public class Animal {
     String name;

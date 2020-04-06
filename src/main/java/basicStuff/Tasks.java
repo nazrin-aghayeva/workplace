@@ -1,4 +1,4 @@
-package BasicStuff;
+package basicStuff;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package Arrays.app;
+package arrays.app;
 
 public class Fish extends Animal{
     Fish(String name) {
