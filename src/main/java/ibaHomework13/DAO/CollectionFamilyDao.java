@@ -1,15 +1,10 @@
-package homework13.DAO;
+package ibaHomework13.DAO;
 
-import homework13.Database.Database;
-import homework13.Database.FileException;
-import homework13.Entity.Family;
-import homework13.Entity.Human;
+import ibaHomework13.Database.Database;
+import ibaHomework13.Entity.Family;
 
-import java.io.*;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 public class CollectionFamilyDao implements FamilyDao<Family> {
 

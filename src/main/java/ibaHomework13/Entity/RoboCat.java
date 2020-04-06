@@ -1,4 +1,4 @@
-package homework13.Entity;
+package ibaHomework13.Entity;
 
 public class RoboCat extends Pet {
     public RoboCat(String nickname, int age, int trickLevel, String[] habitats) {
