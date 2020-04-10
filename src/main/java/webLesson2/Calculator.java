@@ -4,21 +4,19 @@ import com.sun.codemodel.internal.JCase;
 
 public class Calculator {
   public String doOperation(String x, String y, String op) {
+   int a= Integer.parseInt(x);
+   int b= Integer.parseInt(y);
     if (op.equals("multiply")) {
-      int result = Integer.parseInt(x) * Integer.parseInt(y);
-      return String.valueOf(result);
+      return String.valueOf(a*b);
     }
     else if(op.equals("divide")) {
-      int result1 = Integer.parseInt(x) / Integer.parseInt(y);
-      return String.valueOf(result1);
+      return String.valueOf(a/b);
     }
     else if(op.equals("subtract")) {
-      int result2 = Integer.parseInt(x) - Integer.parseInt(y);
-      return String.valueOf(result2);
+      return String.valueOf(a-b);
     }
     else if(op.equals("add")) {
-      int result3 = Integer.parseInt(x) + Integer.parseInt(y);
-      return String.valueOf(result3);
+      return String.valueOf(a+b);
     }
     else if(y.equals("0")) {
       return "division by zero";
