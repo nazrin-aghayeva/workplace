@@ -18,20 +18,22 @@ public class PrintMatrix {
         .collect(Collectors.joining(" "));
   }
 
-//  public static List<Integer> dataOrdered2R(int R, int C, int[][] m, int idx, List<Integer> acc) {
-//    if (idx == R*C) return acc;
-//    int row = idx / C;
-//    int shift = idx - row * C;
-//    int col = (row&1)==0 ? shift : C-1-shift;
-//    acc.add(m[row][col]);
-//    return dataOrdered2R(R, C, m, idx+1, acc);
-//  }
-//
-//  public static String dataOrdered2(int R, int C, int[][] m) {
-//    return dataOrdered2R(R, C, m, 0, new LinkedList<>()).stream()
-//        .map(String::valueOf)
-//        .collect(Collectors.joining(" "));
-//  }
+  // without iteration
+
+  public static List<Integer> dataOrdered2R(int R, int C, int[][] m, int idx, List<Integer> acc) {
+    if (idx == R*C) return acc;
+    int row = idx / C;
+    int shift = idx - row * C;
+    int col = (row&1)==0 ? shift : C-1-shift;
+    acc.add(m[row][col]);
+    return dataOrdered2R(R, C, m, idx+1, acc);
+  }
+
+  public static String dataOrdered2(int R, int C, int[][] m) {
+    return dataOrdered2R(R, C, m, 0, new LinkedList<>()).stream()
+        .map(String::valueOf)
+        .collect(Collectors.joining(" "));
+  }
 
   public static void main(String[] args) {
     int[][]a =
