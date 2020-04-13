@@ -1,4 +1,4 @@
-package webLess2v2;
+package webLess2ver2;
 
 import java.util.function.BiFunction;
 
