@@ -11,8 +11,8 @@ public class PrintMatrix {
     return IntStream.range(0, R*C).map(idx -> {
       int col = idx / R;
       int shift = idx - col * R;
-      int r = (col%2)!=0 ? shift : R-1-shift;
-      return m[r][col];
+      int row = (col%2)==0 ? shift : R-1-shift;
+      return m[row][C-1-col];
     })
         .mapToObj(String::valueOf)
         .collect(Collectors.joining(" "));
