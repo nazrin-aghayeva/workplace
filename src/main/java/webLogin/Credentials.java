@@ -12,4 +12,12 @@ public class Credentials implements Serializable {
         this.email = email;
         this.password = password;
     }
+
+    @Override
+    public String toString() {
+        return "Credentials\n" +
+                "username='" + username + '\'' + "\n"+
+                "email='" + email + '\'' +"\n"+
+                "password='" + password + '\'' ;
+    }
 }

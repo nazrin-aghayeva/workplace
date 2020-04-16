@@ -6,13 +6,13 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LoginApp implements Serializable {
+public class LoginApp {
     List<Credentials> credentialsList= new ArrayList<>();
 
     public String add(String username, String email, String password){
         credentialsList.add(new Credentials(username, email, password));
         write();
-        return "Successfully Created";
+        return "Successfully Created \n"+ read().toString();
     }
     public boolean write(){
         try {
