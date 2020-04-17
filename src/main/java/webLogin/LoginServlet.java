@@ -15,10 +15,15 @@ public class LoginServlet extends HttpServlet {
     }
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        String content= new BufferedReader(new FileReader(new File("content/login.html"))).lines().
+        String content= new BufferedReader(new FileReader(new File("content2/login.html"))).lines().
                 collect(Collectors.joining("\n"));
         try(PrintWriter writer= resp.getWriter()){
             writer.write(content);
+        }
+        String style= new BufferedReader(new FileReader(new File("public/css/style.css"))).lines().
+                collect(Collectors.joining("\n"));
+        try(PrintWriter writer= resp.getWriter()){
+            writer.write(style);
         }
    }
 
