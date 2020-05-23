@@ -1,0 +1,11 @@
+SQL 4
+=====
+
+Relations implementations
+ - 1:1
+ - 1:N
+ - M:N
+
+Constraints
+ - Foreign keys
+ - Composite/Compound/Aggregate primary key
